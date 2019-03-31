@@ -6,6 +6,8 @@ A secure note taking Android App which protects user data using a Lock screen.
 - app/src/main/java/rishabh/notelocker/SplashScreen.java
 - app/src/main/res/layout/activity_main.xml
 - app/src/main/res/layout/activity_splash_screen.xml
+- app/src/main/res/layout/activity_listview.xml
+- app/src/main/res/layout/activity_display_note.xml
 
 
 # Henry note:
