@@ -1,8 +1,8 @@
 # Week 4, Sunday 31/March
-- Made the app icon and sent it to other team member since didnt know how to merge the projects. [WHO?]
-- Splash Screen done. [WHO?
-- Colour and UI elemnts decided. [WHO?]
-- UI elements made for almost all screens. [WHO?]
+- Made the app icon and sent it to other team member since didnt know how to merge the projects. [Aditya Singh Kushwah]
+- Splash Screen done. [Rishabh Bhatia]
+- Colour and UI elemnts decided. [Rishabh Bhatia]
+- UI elements made for almost all screens. [Aditya Singh Kushwah]
 
 ## Week 4, Henry notes
 - This file needs significantly more edits, so I can match dates with attendance.php entries and ensure fair grades at end of trimester.
@@ -12,4 +12,6 @@
 - This project needs more work to meet the pass hurdle.
 - Include multi-line comments (/* */) before each function, to outline what the function does, any arguments and return types, and how to use it.
 
+# Week 5, Sunday 7/April [Aditya]
+- Created To-Do feature for the app this week. [Aditya Singh Kushwah]
 
