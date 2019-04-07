@@ -14,3 +14,6 @@ A secure note taking Android App which protects user data using a Lock screen.
 - also a changelog.txt / changelog.md file
 -Changelog will be added soon
 
+# Note for Developers:
+- Please pull code from your own branch and push it to your own branch.
+- Make sure your code is perfectly working before merging to the master branch.
