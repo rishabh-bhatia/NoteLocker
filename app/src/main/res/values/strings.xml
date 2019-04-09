@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">NoteLocker</string>
+    <string name="add_a_to_do">Add a To-Do</string>
 </resources>
