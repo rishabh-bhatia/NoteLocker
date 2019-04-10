@@ -18,9 +18,6 @@
 - I need to get serious with you here: To catch up, you'll need to do much more. If you're not intending to pass, look into withdrawing from the unit and trying again next year.
 
 
-
-
-=======
 # Week 5, Sunday 7/April [Aditya]
 - Created To-Do feature for the app this week. [Aditya Singh Kushwah]
 
