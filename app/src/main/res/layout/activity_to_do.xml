@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".ToDo">
 
+    <!-- This list view contains a todo item in each row. -->
     <ListView
         android:id="@+id/list_todo"
         android:layout_width="wrap_content"
