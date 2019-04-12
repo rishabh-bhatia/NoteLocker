@@ -3,6 +3,7 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
+/* This is a helper class for opening database. */
 public class OpenDatabase extends SQLiteOpenHelper{
     public OpenDatabase(Context context) {
         super(context, AccessData.database_name, null, AccessData.database_version);

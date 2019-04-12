@@ -34,6 +34,8 @@ public class ToDo extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_do);
+
+        /* Fetching data from the database and displaying it on screen */
         OpenDB = new OpenDatabase(this);
         todoListView = (ListView) findViewById(R.id.list_todo);
         updateUI();
@@ -44,28 +46,33 @@ public class ToDo extends AppCompatActivity {
                 null, null, null, null, null);
         while(cursor.moveToNext()) {
             int idx = cursor.getColumnIndex(AccessData.ToDoEntry.todo_title);
+            // using TAG to print message on logcat
             Log.d(TAG, "Task: " + cursor.getString(idx));
         }
         cursor.close();
         db.close();
     }
+
+    /* onCreateOptionMenu: Inflates the menu in to_do activity */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.todo_menu, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
-    /* */
+    /* onOptionsItemSelected: Responds to different user interaction with the menu item */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.action_add_task:
                 final EditText taskEditText = new EditText(this);
+                /* Adding an alert dialog box to get task from the user when the 'Add' button of menu item is clicked */
                 AlertDialog dialog = new AlertDialog.Builder(this)
                         .setTitle("Make a To-Do")
                         .setMessage("What would you like to add?")
                         .setView(taskEditText)
                         .setPositiveButton("Add", new DialogInterface.OnClickListener() {
+                            /* Getting input from user when 'Add' button is clicked. And, storing it inside database */
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 String task = String.valueOf(taskEditText.getText());
@@ -77,7 +84,7 @@ public class ToDo extends AppCompatActivity {
                                         values,
                                         SQLiteDatabase.CONFLICT_REPLACE);
                                 db.close();
-                                updateUI();
+                                updateUI(); /* Updating the todo list with new changes made to the database, and displaying it on screen. */
                             }
                         })
                         .setNegativeButton("Cancel", null)
@@ -91,8 +98,9 @@ public class ToDo extends AppCompatActivity {
         }
     }
 
-    /* Display the changes made to the database.*/
+    /* Display the changes made to the database using an Adapter.*/
     private void updateUI() {
+        /* Making an array of strings to store tasks entered by the user. */
         ArrayList<String> taskList = new ArrayList<>();
         SQLiteDatabase db = OpenDB.getReadableDatabase();
         Cursor cursor = db.query(AccessData.ToDoEntry.table,
@@ -103,16 +111,20 @@ public class ToDo extends AppCompatActivity {
             taskList.add(cursor.getString(idx));
         }
 
+        /* Check if array adapter is created. */
         if (listAdapter == null) {
+            /* If adapter is not created i.e. NULL, create a new adapter */
             listAdapter = new ArrayAdapter<>(this,
                     R.layout.todo_item,
                     R.id.task_title,
                     taskList);
+            /* Set the above created adapter as the todoListView adapter */
             todoListView.setAdapter(listAdapter);
         } else {
-            listAdapter.clear();
-            listAdapter.addAll(taskList);
-            listAdapter.notifyDataSetChanged();
+            /* If created: it is assigned to the todoListView */
+            listAdapter.clear(); // clear it
+            listAdapter.addAll(taskList); // re-populate it
+            listAdapter.notifyDataSetChanged(); // notify view to refresh with new data values
         }
 
         cursor.close();
