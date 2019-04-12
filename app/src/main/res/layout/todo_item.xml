@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- Defining a layout in interface that represents a task in todo list. -->
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center_vertical">
 
+    <!-- This text view contains the data for a Task in todo list. -->
     <TextView
         android:id="@+id/task_title"
         android:layout_width="wrap_content"
@@ -20,6 +23,7 @@
         android:textColor="@android:color/black"
         android:textSize="30sp" />
 
+    <!-- This is a button labelled 'DONE', for checking off a task from the todo list. -->
     <Button
         android:id="@+id/task_delete"
         android:layout_width="wrap_content"

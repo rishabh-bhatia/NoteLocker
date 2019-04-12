@@ -12,8 +12,6 @@
 - This project needs more work to meet the pass hurdle.
 - Include multi-line comments (/* */) before each function, to outline what the function does, any arguments and return types, and how to use it.
 
-
-
 # Week 5, Sunday 7/April [Aditya]
 - Created To-Do feature for the app this week. [Aditya Singh Kushwah]
 - WHICH FILE(s)? [Henry]
@@ -24,3 +22,13 @@
 
 # Week 6, Thursday 11/April [Henry]
 - When you summarise a feature, if it was a single file, also say which file was updated [Henry]
+
+# Week 6, Friday 12/April [Aditya]
+Added more details to comments in the following files, explaing the working of ToDo feature of the app:
+- app/src/main/java/rishabh/notelocker/ToDo.java [Aditya Singh Kushwah]
+- app/src/main/java/rishabh/notelocker/db/AccessData.java [Aditya Singh Kushwah]
+- app/src/main/java/rishabh/notelocker/db/OpenDatabase.java [Aditya Singh Kushwah]
+- app/src/main/res/menu/todo_menu.xml [Aditya Singh Kushwah]
+- app/src/main/res/layout/todo_item.xml [Aditya Singh Kushwah]
+- app/src/main/res/layout/activity_to_do.xml [Aditya Singh Kushwah]
+
