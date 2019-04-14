@@ -32,3 +32,31 @@ Added more details to comments in the following files, explaing the working of T
 - app/src/main/res/layout/todo_item.xml [Aditya Singh Kushwah]
 - app/src/main/res/layout/activity_to_do.xml [Aditya Singh Kushwah]
 
+# Week 6, Friday 13/April [Rishabh]
+Created new Activity to Add Lock Screen functionality to the Application. Also Fixed some bugs which were preventing the app from showing the app icon.
+Some directories/Activities that were created/modified are as follows
+- app/src/main/AndroidManifest.xml
+- app/src/main/ic_launcher-web.png
+- app/src/main/java/rishabh/notelocker/CreatePasswordActivity.java
+- src/main/java/rishabh/notelocker/EnterPasswordActivity.java
+- app/src/main/java/rishabh/notelocker/SplashScreen.java
+- app/src/main/res/drawable/ic_launcher_background.xml
+- app/src/main/res/layout/activity_create_password.xml
+- app/src/main/res/layout/activity_enter_password.xml
+- app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
+- app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
+- app/src/main/res/mipmap-hdpi/ic_launcher.png
+- app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png
+- app/src/main/res/mipmap-hdpi/ic_launcher_round.png
+- app/src/main/res/mipmap-mdpi/ic_launcher.png
+- app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png
+- app/src/main/res/mipmap-mdpi/ic_launcher_round.png
+- app/src/main/res/mipmap-xhdpi/ic_launcher.png
+- app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png
+- app/src/main/res/mipmap-xhdpi/ic_launcher_round.png
+- app/src/main/res/mipmap-xxhdpi/ic_launcher.png
+- app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png
+- app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png
+- app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
+- app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png
+- app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
