@@ -28,35 +28,16 @@ Added more details to comments in the following files, explaing the working of T
 - app/src/main/java/rishabh/notelocker/ToDo.java [Aditya Singh Kushwah]
 - app/src/main/java/rishabh/notelocker/db/AccessData.java [Aditya Singh Kushwah]
 - app/src/main/java/rishabh/notelocker/db/OpenDatabase.java [Aditya Singh Kushwah]
-- app/src/main/res/menu/todo_menu.xml [Aditya Singh Kushwah]
-- app/src/main/res/layout/todo_item.xml [Aditya Singh Kushwah]
-- app/src/main/res/layout/activity_to_do.xml [Aditya Singh Kushwah]
 
 # Week 6, Friday 13/April [Rishabh]
 Created new Activity to Add Lock Screen functionality to the Application. Also Fixed some bugs which were preventing the app from showing the app icon.
-Some directories/Activities that were created/modified are as follows
-- app/src/main/AndroidManifest.xml
-- app/src/main/ic_launcher-web.png
+Some directories/Activities that were created/modified are as follows:
 - app/src/main/java/rishabh/notelocker/CreatePasswordActivity.java
 - src/main/java/rishabh/notelocker/EnterPasswordActivity.java
 - app/src/main/java/rishabh/notelocker/SplashScreen.java
-- app/src/main/res/drawable/ic_launcher_background.xml
-- app/src/main/res/layout/activity_create_password.xml
-- app/src/main/res/layout/activity_enter_password.xml
-- app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml
-- app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml
-- app/src/main/res/mipmap-hdpi/ic_launcher.png
-- app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png
-- app/src/main/res/mipmap-hdpi/ic_launcher_round.png
-- app/src/main/res/mipmap-mdpi/ic_launcher.png
-- app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png
-- app/src/main/res/mipmap-mdpi/ic_launcher_round.png
-- app/src/main/res/mipmap-xhdpi/ic_launcher.png
-- app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png
-- app/src/main/res/mipmap-xhdpi/ic_launcher_round.png
-- app/src/main/res/mipmap-xxhdpi/ic_launcher.png
-- app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png
-- app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png
-- app/src/main/res/mipmap-xxxhdpi/ic_launcher.png
-- app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png
-- app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png
+
+# Week 7, Monday 15/April
+- Feedback: Good job doing some work. But I still don't see enough progress happening each week (minimum 10 hours of coding). I'd like you to start writing the time taken per changelog item (in brackets at the end of each line), so that you can see where time is being spent / not being spent enough. [Henry]
+- Feedback: Only need to list the main files edited, not every file (e.g. xml files don't matter, only code). [Henry]
+
+
