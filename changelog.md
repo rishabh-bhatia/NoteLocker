@@ -40,4 +40,10 @@ Some directories/Activities that were created/modified are as follows:
 - Feedback: Good job doing some work. But I still don't see enough progress happening each week (minimum 10 hours of coding). I'd like you to start writing the time taken per changelog item (in brackets at the end of each line), so that you can see where time is being spent / not being spent enough. [Henry]
 - Feedback: Only need to list the main files edited, not every file (e.g. xml files don't matter, only code). [Henry]
 
+# Week 7, Wednesday 17/April[Rishabh]
+Created new activities for note  taking feature and started working on making the features work. 
+Some directories/Activities that were created/modified are as follows:
+- app/src/main/java/rishabh/notelocker/Notes.java
+- src/main/java/rishabh/notelocker/EditNoteActivity.java
+
 
