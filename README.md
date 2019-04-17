@@ -9,6 +9,10 @@ A secure note taking Android App which protects user data using a Lock screen.
 - app/src/main/java/rishabh/notelocker/db/OpenDatabase.java
 - app/src/main/java/rishabh/notelocker/CreatePasswordActivity.java
 - app/src/main/java/rishabh/notelocker/EnterPasswordActivity.java
+- app/src/main/java/rishabh/notelocker/Notes.java
+- src/main/java/rishabh/notelocker/EditNoteActivity.java
+- app/src/main/res/layout/activity_notes.xml
+- app/src/main/res/layout/activity_edit_note.xml
 - app/src/main/res/layout/activity_main.xml
 - app/src/main/res/layout/activity_splash_screen.xml
 - app/src/main/res/layout/activity_listview.xml
