@@ -15,4 +15,9 @@ public class MainActivity extends AppCompatActivity {
         Intent myIntent = new Intent(getBaseContext(),   ToDo.class);
         startActivity(myIntent);
     }
+
+    public void onNoteClick(View v){
+        Intent myIntent = new Intent(getApplicationContext(),   Notes.class);
+        startActivity(myIntent);
+    }
 }
