@@ -43,7 +43,7 @@
             android:layout_marginBottom="8dp"
             android:background="@android:color/background_light"
             android:onClick="onNoteClick"
-            android:text="Add note"
+            android:text="notes"
             android:textColor="@android:color/black"
             android:textSize="36sp"
             android:textStyle="bold" />
