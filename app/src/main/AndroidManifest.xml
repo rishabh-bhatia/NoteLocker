@@ -10,14 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".EditNoteActivity"></activity>
+        <activity
+            android:name=".Information"
+            android:label="Information" />
+        <activity
+            android:name=".Notes"
+            android:label="Notes" />
+        <activity
+            android:name=".Settings"
+            android:label="Settings" />
         <activity android:name=".EnterPasswordActivity" />
         <activity android:name=".CreatePasswordActivity" />
         <activity
             android:name=".ToDo"
-            android:theme="@style/ToDoBarTheme" />
-        <activity
-            android:name=".Notes"
-            android:theme="@style/ToDoBarTheme" />
+            android:label="To-Do List" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

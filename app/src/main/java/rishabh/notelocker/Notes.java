@@ -20,7 +20,14 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.HashSet;
 
-public class Notes extends AppCompatActivity {
+import android.content.Intent;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBarDrawerToggle;
+import android.support.v7.widget.Toolbar;
+
+public class Notes extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     static ArrayList<String> notes = new ArrayList<>();
     static ArrayAdapter aa;
@@ -50,7 +57,18 @@ public class Notes extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
-
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
+                drawer,
+                toolbar,
+                R.string.nav_open_drawer,
+                R.string.nav_close_drawer);
+        drawer.addDrawerListener(toggle);
+        toggle.syncState();
+        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView.setNavigationItemSelectedListener(this);
         ListView listView = findViewById(R.id.listview);
 
         //Check existence of set and display set if exists from sharedpreferences
@@ -103,5 +121,46 @@ public class Notes extends AppCompatActivity {
         });
     }
 
+    @Override
+    public boolean onNavigationItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        Intent intent = null;
+        switch(id){
+
+            case R.id.nav_todo:
+                intent = new Intent(this, ToDo.class);
+                break;
+
+            case R.id.nav_settings:
+                intent = new Intent(this, Settings.class);
+                break;
+
+            case R.id.nav_notes:
+                intent = new Intent(this, Notes.class);
+                break;
+
+            case R.id.nav_info:
+                intent = new Intent(this, Information.class);
+                break;
+
+            default:
+                intent = new Intent(this, Notes.class);
+        }
+
+        startActivity(intent);
+        finish();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.closeDrawer(GravityCompat.START);
+        return true;
+    }
+    @Override
+    public void onBackPressed() {
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
+    }
 
 }

@@ -5,7 +5,7 @@
     <!-- This menu item allows user to add a task in todo list. -->
     <item
         android:id="@+id/action_add_task"
-        android:icon="@android:drawable/ic_menu_add"
+        android:icon="@drawable/ic_add"
         android:title="Add Task"
         app:showAsAction="always" />
 </menu>
