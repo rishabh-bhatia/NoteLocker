@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,6 +15,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -54,9 +56,8 @@ public class Notes extends AppCompatActivity {
         //Check existence of set and display set if exists from sharedpreferences
         SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("rishabh.notelocker", Context.MODE_PRIVATE);
         HashSet<String> set = (HashSet<String>) sharedPreferences.getStringSet("notes", null);
-
         if(set == null){
-            notes.add("Example note");//If the set is null then a demo note is displayed
+            Toast.makeText(this, "No note found", Toast.LENGTH_LONG).show();//If the set is null then a toast notification is shown
         }
         else{
             notes = new ArrayList(set);//If the set is not null then the Hashset will be shown from sharedPreferences
@@ -101,4 +102,6 @@ public class Notes extends AppCompatActivity {
             }
         });
     }
+
+
 }
