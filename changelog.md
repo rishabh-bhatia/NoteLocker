@@ -43,7 +43,43 @@ Some directories/Activities that were created/modified are as follows:
 # Week 7, Wednesday 17/April[Rishabh]
 Created new activities for note  taking feature and started working on making the features work. 
 Some directories/Activities that were created/modified are as follows:
-- app/src/main/java/rishabh/notelocker/Notes.java
-- src/main/java/rishabh/notelocker/EditNoteActivity.java
+- app/src/main/java/rishabh/notelocker/Notes.java(2hrs)
+- src/main/java/rishabh/notelocker/EditNoteActivity.java(7hrs)
+
+# Week 8, Thursday 9/May[Rishabh]
+- Implemented the note taking feature succesfully
+- Implemented note saving feature sucessfully
+- Implemented Note deleted feature sucessfully
+Some directories/Activities that were created/modified are as follows:
+- app/src/main/java/rishabh/notelocker/Notes.java(4hrs)
+- src/main/java/rishabh/notelocker/EditNoteActivity.java(8hrs)
+
+# Week 8, Sunday 12/May[Aditya]
+- Sucessfully implemented Navigation drawer layout
+- Fixed orientation issues
+- Fixed a bug where activities were stacking up in background
+- Added confirmation request before exit
+Some directories/Activities that were created/modified are as follows:
+- app/src/main/java/rishabh/notelocker/ToDo.java(2hrs)
+- app/src/main/java/rishabh/notelocker/Information.java(2hrs)
+- app/src/main/java/rishabh/notelocker/Notes.java(2hrs)
+- app/src/main/java/rishabh/notelocker/MainActivity.java(3hrs)
+
+# Week 9, Thursday, Friday  7,8/ May[Rishabh]
+- Tested the app regularly throughout the day by making it my own personal to-do list and note taking app.(Roughly 10hrs)
+
+# Week 9, Thursday, Friday  10, 11/ May[Aditya]
+- Tested the app regularly throughout the day by making it my own personal to-do list and note taking app.(Roughly 10 hrs)
+
+# Week 10 Thursday, Friday  15, 16/ May[Rishabh]
+- Added support for different screen sizes(2hrs)
+- Added support for orientation(1 hrs)
+- Fixed bugs causing the app to crash(8hrs)
+
+# Week 10 Thursday, Friday  15, 16/ May[Aditya]
+- Added support for orientation in 3 Activities(2hrs)
+- Changed Main Acitvity layout(3hrs)
+- Updated app API to latest to satisfy PlayStore's requirements(1hr)
+- Fixed bugs causing crashes due to API change(3hrs)
 
 
