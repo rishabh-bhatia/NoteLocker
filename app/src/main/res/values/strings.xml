@@ -9,8 +9,9 @@
     <string name="notes">Notes</string>
     <string name="settings">Settings</string>
     <string name="info">Info</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us">Legal</string>
+    <string name="licenses">NoteLocker App Icon is copyrighted and exclusive to developers Aditya Singh Kushwah and Rishabh Bhatiya.</string>
+    <string name="about_disclaimer">By accessing or using NoteLocker Mobile App or any page of this app, you signify your assent to this disclaimer. The contents of this app, including without limitation, all data, information, text, graphics, and other materials are provided as a convenience to our app users and are meant to be used for informational purposes only. We do not use your personal information in any form. All the data is private to the user.</string>
 </resources>
 

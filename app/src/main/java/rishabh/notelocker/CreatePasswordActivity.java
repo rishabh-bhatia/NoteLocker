@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/* This class extends AppCompat because an AppCompat theme is used. */
 public class CreatePasswordActivity extends AppCompatActivity {
 
     EditText e1, e2;//Initializing editable textfields

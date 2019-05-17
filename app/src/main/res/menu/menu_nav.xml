@@ -4,8 +4,7 @@
         <item
             android:id="@+id/nav_todo"
             android:icon="@drawable/ic_todo"
-            android:title="@string/add_a_to_do"
-            android:checked="true"/>
+            android:title="@string/add_a_to_do" />
         <item
             android:id="@+id/nav_notes"
             android:icon="@drawable/ic_notes"
