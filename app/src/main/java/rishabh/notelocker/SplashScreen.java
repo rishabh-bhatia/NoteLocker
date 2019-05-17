@@ -19,20 +19,18 @@ public class SplashScreen extends AppCompatActivity {
         SharedPreferences settings = getSharedPreferences("PREFS", 0);
         password = settings.getString("password", "");
 
-        Thread SplashSc = new Thread(){
-            public void run(){
+        Thread SplashSc = new Thread() {
+            public void run() {
                 try {
                     sleep(2000);
                     //If there's no password
-                    if(password.equals(""))
-                    {
+                    if (password.equals("")) {
                         Intent intent = new Intent(getApplicationContext(), CreatePasswordActivity.class);//Go to Create password Activity
                         startActivity(intent);
                         finish();//To finish the activity once another activity begins
                     }
                     //If there's a password already
-                    else
-                    {
+                    else {
                         Intent intent = new Intent(getApplicationContext(), EnterPasswordActivity.class);//Go to Enter password Activity
                         startActivity(intent);
                         finish();//To finish the activity once another activity begins
