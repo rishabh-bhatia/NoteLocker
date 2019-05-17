@@ -11,6 +11,7 @@ import android.widget.EditText;
 
 import java.util.HashSet;
 
+/* This class extends AppCompat because an AppCompat theme is used. */
 public class EditNoteActivity extends AppCompatActivity {
     int noteRefId;
 

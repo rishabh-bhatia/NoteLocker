@@ -24,7 +24,7 @@
         android:textColor="@android:color/black"
         android:textSize="18sp" />
 
-    <!-- This is a button labelled 'DONE', for checking off a task from the todo list. -->
+    <!-- This is a button labelled 'DONE', for checking off/ delete a task from the todo list. -->
     <Button
         android:id="@+id/task_delete"
         android:layout_width="wrap_content"
