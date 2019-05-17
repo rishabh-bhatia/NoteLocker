@@ -81,11 +81,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         }
 
         startActivity(intent);
+        /* Closing the drawer by getting reference to the drawer layout, and calling its closeDrawer() method. */
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
+        drawer.closeDrawer(GravityCompat.START); // using START as the drawer is attached to the activity's start edge
         return true;
     }
 
+    /* This method gets called when the back button is pressed. */
     @Override
     public void onBackPressed() {
         new AlertDialog.Builder(this)
