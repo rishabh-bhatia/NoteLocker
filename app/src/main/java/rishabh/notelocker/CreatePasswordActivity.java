@@ -31,12 +31,10 @@ public class CreatePasswordActivity extends AppCompatActivity {
                 String s2 = e2.getText().toString();//Get the text from editText2 field
 
                 //Setting password
-                if(s1.equals("") || s2.equals(""))//Password hasn't been entered
+                if (s1.equals("") || s2.equals(""))//Password hasn't been entered
                 {
                     Toast.makeText(CreatePasswordActivity.this, "Please enter a password!", Toast.LENGTH_SHORT).show();
-                }
-                else
-                {
+                } else {
                     if (s1.equals(s2))//Passwords match so set password
                     {
                         SharedPreferences setiings = getSharedPreferences("PREFS", 0);
@@ -48,8 +46,7 @@ public class CreatePasswordActivity extends AppCompatActivity {
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);//Go to Main Activity
                         startActivity(intent);
                         finish();//To finish the activity once another activity begins
-                    }
-                    else//Passwords don't match
+                    } else//Passwords don't match
                     {
                         Toast.makeText(CreatePasswordActivity.this, "Passwords don't match", Toast.LENGTH_SHORT).show();
                     }

@@ -13,7 +13,7 @@ import android.view.MenuItem;
 /* This class extends AppCompat because an AppCompat theme is used. */
 /* Implementing the NavigationView.OnNavigationItemSelectedListener interface allows activity to
 respond to the user's clicking options in the navigation drawer.*/
-public class Information extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class Information extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +47,7 @@ public class Information extends AppCompatActivity implements NavigationView.OnN
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
         Intent intent = null;
-        switch(id){
+        switch (id) {
 
             case R.id.home_h:
                 intent = new Intent(this, MainActivity.class);
@@ -71,6 +71,7 @@ public class Information extends AppCompatActivity implements NavigationView.OnN
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
+
     @Override
     public void onBackPressed() {
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

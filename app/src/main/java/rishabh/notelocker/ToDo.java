@@ -16,12 +16,15 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.support.v7.widget.Toolbar;
+
 import java.util.ArrayList;
+
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.design.widget.NavigationView;
 import android.content.Intent;
 import android.support.v4.view.GravityCompat;
+
 import rishabh.notelocker.db.AccessData;
 import rishabh.notelocker.db.OpenDatabase;
 
@@ -29,7 +32,7 @@ import rishabh.notelocker.db.OpenDatabase;
 /* This class extends AppCompat because an AppCompat theme is used. */
 /* Implementing the NavigationView.OnNavigationItemSelectedListener interface allows activity to
 respond to the user's clicking options in the navigation drawer.*/
-public class ToDo extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
+public class ToDo extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private static final String TAG = "ToDo"; // creating constant for logging
     private OpenDatabase OpenDB;    // a private instance of helper class
@@ -72,7 +75,7 @@ public class ToDo extends AppCompatActivity implements NavigationView.OnNavigati
         Cursor cursor = db.query(AccessData.ToDoEntry.table,
                 new String[]{AccessData.ToDoEntry._ID, AccessData.ToDoEntry.todo_title},
                 null, null, null, null, null);
-        while(cursor.moveToNext()) {
+        while (cursor.moveToNext()) {
             int idx = cursor.getColumnIndex(AccessData.ToDoEntry.todo_title);
             // using TAG to print message on logcat
             Log.d(TAG, "Task: " + cursor.getString(idx));
@@ -86,7 +89,7 @@ public class ToDo extends AppCompatActivity implements NavigationView.OnNavigati
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
         Intent intent = null;
-        switch(id){
+        switch (id) {
 
             case R.id.home_h:
                 intent = new Intent(this, MainActivity.class);

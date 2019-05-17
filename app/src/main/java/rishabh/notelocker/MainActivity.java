@@ -46,13 +46,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     }
 
-    public void onToDoClick(View v){
-        Intent myIntent = new Intent(getBaseContext(),   ToDo.class);
+    public void onToDoClick(View v) {
+        Intent myIntent = new Intent(getBaseContext(), ToDo.class);
         startActivity(myIntent);
     }
 
-    public void onNoteClick(View v){
-        Intent myIntent = new Intent(getApplicationContext(),   Notes.class);
+    public void onNoteClick(View v) {
+        Intent myIntent = new Intent(getApplicationContext(), Notes.class);
         startActivity(myIntent);
     }
 
@@ -61,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
         Intent intent = null;
-        switch(id){
+        switch (id) {
 
             case R.id.home_h:
                 intent = new Intent(this, MainActivity.class);

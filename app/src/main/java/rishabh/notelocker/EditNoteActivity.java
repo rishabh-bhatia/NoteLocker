@@ -26,11 +26,11 @@ public class EditNoteActivity extends AppCompatActivity {
         noteRefId = intent.getIntExtra("noteRefId", -1);
 
 
-        if(noteRefId != -1) {
+        if (noteRefId != -1) {
             editText.setText(Notes.notes.get(noteRefId));
         }
         //Add new notes
-        else{
+        else {
             Notes.notes.add("");
             noteRefId = Notes.notes.size() - 1;
             Notes.aa.notifyDataSetChanged();//Notifies the Array Adapter that data has changed
@@ -47,9 +47,10 @@ public class EditNoteActivity extends AppCompatActivity {
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
                 Notes.notes.set(noteRefId, String.valueOf(charSequence));
                 Notes.aa.notifyDataSetChanged();
-                //This is to get access to our app data
+                //This initializes shared preferences and sets it to private mode so that only the app can access the data in it
                 SharedPreferences sharedPreferences = getApplicationContext().getSharedPreferences("rishabh.notelocker", Context.MODE_PRIVATE);
 
+                //Creating a Hashset instead of Arraylist to prevent duplicacy of data
                 HashSet<String> set = new HashSet(Notes.notes);
                 sharedPreferences.edit().putStringSet("notes", set).apply();
 
