@@ -16,9 +16,6 @@
         <activity
             android:name=".Notes"
             android:label="Notes" />
-        <activity
-            android:name=".Settings"
-            android:label="Settings" />
         <activity android:name=".EnterPasswordActivity" />
         <activity android:name=".CreatePasswordActivity" />
         <activity

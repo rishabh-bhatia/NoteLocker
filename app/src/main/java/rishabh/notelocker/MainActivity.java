@@ -67,11 +67,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 intent = new Intent(this, MainActivity.class);
                 break;
 
-            case R.id.nav_settings:
-                intent = new Intent(this, Settings.class);
-                break;
-
-
             case R.id.nav_info:
                 intent = new Intent(this, Information.class);
                 break;
