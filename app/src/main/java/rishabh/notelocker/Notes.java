@@ -42,10 +42,13 @@ public class Notes extends AppCompatActivity implements NavigationView.OnNavigat
         return super.onCreateOptionsMenu(menu);
     }
 
-    //Decides actions when an item is selected, in this case when a new note is added from menuItem then a new activity is started
+    /*Decides actions when an item is selected, in this case when a new note is added from menuItem
+     then a new activity is started which will allow the user to* edit their note./
+      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
+        //When the item that has been selected is add_note, start a new activity
         if(item.getItemId() == R.id.add_note){
             Intent intent = new Intent(getApplicationContext(), EditNoteActivity.class);
             startActivity(intent);
@@ -57,6 +60,7 @@ public class Notes extends AppCompatActivity implements NavigationView.OnNavigat
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_notes);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -19,20 +19,20 @@ public class CreatePasswordActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_password);
 
-        e1 = findViewById(R.id.editText);
-        e2 = findViewById(R.id.editText2);
+        e1 = findViewById(R.id.editText);//Enter password
+        e2 = findViewById(R.id.editText2);//Confirm password
         button = findViewById(R.id.button2);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String s1 = e1.getText().toString();
-                String s2 = e2.getText().toString();
+                String s1 = e1.getText().toString();//Get the text from editText field
+                String s2 = e2.getText().toString();//Get the text from editText2 field
 
                 //Setting password
                 if(s1.equals("") || s2.equals(""))//Password hasn't been entered
                 {
-                    Toast.makeText(CreatePasswordActivity.this, "Please enter a password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(CreatePasswordActivity.this, "Please enter a password!", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
@@ -43,7 +43,7 @@ public class CreatePasswordActivity extends AppCompatActivity {
                         editor.putString("password", s1);
                         editor.apply();
 
-                        //Go to the Main Activity
+                        //Go to the MainActivity class using intent
                         Intent intent = new Intent(getApplicationContext(), MainActivity.class);//Go to Main Activity
                         startActivity(intent);
                         finish();//To finish the activity once another activity begins
