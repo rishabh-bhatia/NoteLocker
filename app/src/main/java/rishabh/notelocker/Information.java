@@ -49,16 +49,12 @@ public class Information extends AppCompatActivity implements NavigationView.OnN
         Intent intent = null;
         switch(id){
 
-            case R.id.nav_todo:
-                intent = new Intent(this, ToDo.class);
+            case R.id.home_h:
+                intent = new Intent(this, MainActivity.class);
                 break;
 
             case R.id.nav_settings:
                 intent = new Intent(this, Settings.class);
-                break;
-
-            case R.id.nav_notes:
-                intent = new Intent(this, Notes.class);
                 break;
 
             case R.id.nav_info:

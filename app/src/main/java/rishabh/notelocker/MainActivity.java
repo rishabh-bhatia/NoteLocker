@@ -1,16 +1,18 @@
 package rishabh.notelocker;
 
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.content.Intent;
-import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
+import android.view.MenuItem;
+import android.view.View;
 
 /* This class extends AppCompat because an AppCompat theme is used. */
 /* Implementing the NavigationView.OnNavigationItemSelectedListener interface allows activity to
@@ -42,6 +44,17 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
          * This is done by getting a reference to the navigation view, and calling it's navigationView.setNavigationItemSelectedListener() method. */
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+    }
+
+    public void onToDoClick(View v){
+        Intent myIntent = new Intent(getBaseContext(),   ToDo.class);
+        startActivity(myIntent);
+    }
+
+    public void onNoteClick(View v){
+        Intent myIntent = new Intent(getApplicationContext(),   Notes.class);
+        startActivity(myIntent);
     }
 
     /* This gets called when an item in the drawer is clicked. Parameter is the clicked item. */
@@ -51,17 +64,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Intent intent = null;
         switch(id){
 
-            case R.id.nav_todo:
-                intent = new Intent(this, ToDo.class);
+            case R.id.home_h:
+                intent = new Intent(this, MainActivity.class);
                 break;
 
             case R.id.nav_settings:
                 intent = new Intent(this, Settings.class);
                 break;
 
-            case R.id.nav_notes:
-                intent = new Intent(this, Notes.class);
-                break;
 
             case R.id.nav_info:
                 intent = new Intent(this, Information.class);
