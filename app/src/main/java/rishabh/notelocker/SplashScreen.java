@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+/* This class extends AppCompat because an AppCompat theme is used. */
 public class SplashScreen extends AppCompatActivity {
 
     String password;

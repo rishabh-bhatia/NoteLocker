@@ -25,34 +25,46 @@ import android.support.v4.view.GravityCompat;
 import rishabh.notelocker.db.AccessData;
 import rishabh.notelocker.db.OpenDatabase;
 
+/* This class consists of methods which make together a feature for adding and deleting a ToDo.*/
+/* This class extends AppCompat because an AppCompat theme is used. */
+/* Implementing the NavigationView.OnNavigationItemSelectedListener interface allows activity to
+respond to the user's clicking options in the navigation drawer.*/
 public class ToDo extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
-    private static final String TAG = "ToDo";
-    private OpenDatabase OpenDB;
-    private ListView todoListView;
-    private ArrayAdapter<String> listAdapter;
+    private static final String TAG = "ToDo"; // creating constant for logging
+    private OpenDatabase OpenDB;    // a private instance of helper class
+    private ListView todoListView;  // a private instance of ListView
+    private ArrayAdapter<String> listAdapter; // this helps in populating listView with data
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_to_do);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
+        setSupportActionBar(toolbar); // setting toolbar as the activity's app bar
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+
+        /* Adding drawer toggle for opening the navigation drawer by clicking on an icon in the toolbar. */
+        /* Adding a drawer toggle by creating an instance of  ActionBarDrawerToggle class and adding it to the drawer layout. */
+        /* The ActionBarDrawerToggle takes five parameters : current activity, activity's drawer layout, activity's toolbar,
+        and ID of two string resources for opening and closing the drawer. */
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(this,
                 drawer,
                 toolbar,
                 R.string.nav_open_drawer,
                 R.string.nav_close_drawer);
+        /* Adding toggle to the drawer layout by calling the DrawerLayout AddDrawerLayout() method, and passing toggle as parameter. */
         drawer.addDrawerListener(toggle);
+        /* Calling toggle's syncState() method to synchronize the icon on the toolbar with the state of the drawer. */
         toggle.syncState();
+        /* Registering the activity as a listener on the navigation view so it will be notified if the user clicks on an item.
+         * This is done by getting a reference to the navigation view, and calling it's navigationView.setNavigationItemSelectedListener() method. */
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         /* Fetching data from the database and displaying it on screen */
-        OpenDB = new OpenDatabase(this);
-        todoListView = (ListView) findViewById(R.id.list_todo);
+        OpenDB = new OpenDatabase(this); // initializing instance of helper class
+        todoListView = (ListView) findViewById(R.id.list_todo); // initializing the listView
 
         updateUI();
 
@@ -69,6 +81,7 @@ public class ToDo extends AppCompatActivity implements NavigationView.OnNavigati
         db.close();
     }
 
+    /* This gets called when an item in the drawer is clicked. Parameter is the clicked item. */
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
         int id = item.getItemId();
@@ -185,7 +198,7 @@ public class ToDo extends AppCompatActivity implements NavigationView.OnNavigati
         db.close();
     }
 
-    /* Deletes an item from ToDo list.*/
+    /* Deletes an item from ToDo list. This method gets called when user taps on 'Done' button.*/
     public void deleteToDo(View view) {
         View parent = (View) view.getParent();
         TextView taskTextView = (TextView) parent.findViewById(R.id.task_title);
