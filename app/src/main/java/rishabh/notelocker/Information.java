@@ -1,27 +1,24 @@
 package rishabh.notelocker;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
 
 /* This class extends AppCompat because an AppCompat theme is used. */
 /* Implementing the NavigationView.OnNavigationItemSelectedListener interface allows activity to
 respond to the user's clicking options in the navigation drawer.*/
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class Information extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_information);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar); // setting toolbar as the activity's app bar
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -43,17 +40,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
          * This is done by getting a reference to the navigation view, and calling it's navigationView.setNavigationItemSelectedListener() method. */
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-    }
-
-    public void onToDoClick(View v) {
-        Intent myIntent = new Intent(getBaseContext(), ToDo.class);
-        startActivity(myIntent);
-    }
-
-    public void onNoteClick(View v) {
-        Intent myIntent = new Intent(getApplicationContext(), Notes.class);
-        startActivity(myIntent);
     }
 
     /* This gets called when an item in the drawer is clicked. Parameter is the clicked item. */
@@ -72,29 +58,27 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 break;
 
             default:
-                intent = new Intent(this, ToDo.class);
+                intent = new Intent(this, Information.class);
         }
 
         startActivity(intent);
+        finish();
         /* Closing the drawer by getting reference to the drawer layout, and calling its closeDrawer() method. */
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START); // using START as the drawer is attached to the activity's start edge
         return true;
     }
 
+
     /* This method gets called when the back button is pressed. */
     @Override
     public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setTitle("Exit NoteLocker?")
-                .setMessage("Are you sure you want to exit?")
-                .setNegativeButton(android.R.string.no, null)
-                .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        MainActivity.super.onBackPressed();
-                    }
-                }).create().show();
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        if (drawer.isDrawerOpen(GravityCompat.START)) {
+            drawer.closeDrawer(GravityCompat.START);
+        } else {
+            super.onBackPressed();
+        }
     }
 }
 

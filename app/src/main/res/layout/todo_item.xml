@@ -13,32 +13,34 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
+        android:layout_margin="32dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="16dp"
         android:layout_toStartOf="@+id/task_delete"
         android:text="ToDo list goes here."
         android:textColor="@android:color/black"
-        android:textSize="30sp" />
+        android:textSize="18sp" />
 
-    <!-- This is a button labelled 'DONE', for checking off a task from the todo list. -->
+    <!-- This is a button labelled 'DONE', for checking off/ delete a task from the todo list. -->
     <Button
         android:id="@+id/task_delete"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
-        android:background="@color/colorAccent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@color/darkgray"
         android:onClick="deleteToDo"
         android:text="Done"
         android:textColor="@android:color/background_light"
-        android:textSize="24sp"
-        android:textStyle="italic" />
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>
+

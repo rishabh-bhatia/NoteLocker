@@ -17,12 +17,37 @@
             layout="@layout/toolbar_main"
             android:id="@+id/toolbar" />
 
-        <!-- This list view contains a todo item in each row. -->
-        <ListView
-            android:id="@+id/list_todo"
-            android:layout_width="wrap_content"
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            android:padding="8dp"
+            android:text="@string/about_us"
+            android:textColor="@android:color/black"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/about_disclaimer" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Licenses"
+            android:textColor="@android:color/black"
+            android:textSize="36sp" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="@string/licenses" />
 
     </LinearLayout>
 
@@ -35,4 +60,5 @@
         app:menu="@menu/menu_nav">
 
     </android.support.design.widget.NavigationView>
+
 </android.support.v4.widget.DrawerLayout>

@@ -9,18 +9,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/* This class extends AppCompat because an AppCompat theme is used. */
 public class EnterPasswordActivity extends AppCompatActivity {
 
     EditText e1;
     Button button;
 
     String password;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_password);
 
-        //Loading Password to the app
+        //Loading Password to the app using sharedpreferences
         SharedPreferences settings = getSharedPreferences("PREFS", 0);
         password = settings.getString("password", "");
 
@@ -32,14 +34,15 @@ public class EnterPasswordActivity extends AppCompatActivity {
             public void onClick(View view) {
                 String s1 = e1.getText().toString();
 
-                if (s1.equals(password))
-                {
+                /*Verifying password. If the password is the same as the one stored in shared preference then
+                 * it takes user to Main acitivity*/
+                if (s1.equals(password)) {
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);//Go to Main Activity
                     startActivity(intent);
                     finish();//To finish the activity once another activity begins
                 }
-                else
-                {
+                //If the password is incorrect then the user is displayed an error message.
+                else {
                     Toast.makeText(getApplicationContext(), "Wrong Password!", Toast.LENGTH_SHORT).show();
                 }
             }
